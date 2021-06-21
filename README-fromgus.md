@@ -106,3 +106,7 @@ O Firebase é uma plataforma desenvolvida pelo Google para a criação de aplica
     - toda vez que mudamos as variáveis ambientes em um projeto, é necessário reiniciar o serviço do react no terminal
       - yarn start
       
+
+## CÓDIGOS DO SORTEIO ROCKETSEAT NLW-TOGETHER
+
+Primeiro Código: #together
