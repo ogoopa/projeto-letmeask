@@ -4,6 +4,13 @@ Quando trabalhamos com o HTML dentro do JavaScript => JSX (JacaScript XML (lingu
 
 A extensão TSX se dá pelo TypeScript, especificando que o JSX está sendo escrito com TypeScript
 
+## REACT
+
+- Ao inicializarmos qualquer projeto React, o primeiro passo é inserir o comando yarn start no terminal;
+- O Create React App permite utilizar o SASS, do CSS;
+  - para isso, é necessário instalar o node-sass
+    yarn add node-sass@^5.0.0
+
 ## COMPONENTES ##
 
 `Componentes`: pedaços isolados de código, que juntos formam uma aplicação;
@@ -110,3 +117,10 @@ O Firebase é uma plataforma desenvolvida pelo Google para a criação de aplica
 ## CÓDIGOS DO SORTEIO ROCKETSEAT NLW-TOGETHER
 
 Primeiro Código: #together
+Segundo Código: #unidade
+
+## Contextos do React
+
+- utilizado quando se quer compartilhar informações entre diferentes componentes numa aplicação;
+- essa informação pode ser qualquer coisa, textos, valores mais complexos como objetos, arrays;
+- a forma mais correta e simples de se fazer isso no React é utilizando contextos;

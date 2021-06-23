@@ -1,5 +1,5 @@
 /* o ButtonProps é a tipagem que fala quais são todas as propriedades do Button. O nome XxxxProps é o padrão dessa tipagem 
-
+  // o nome da variável let vem de let it change (deixe mudar)
 type ButtonProps = {
   text?: string;
 }
@@ -13,22 +13,14 @@ export function Button(props: ButtonProps) {
 
 esse tipo de export é chamado named export. é possível fazer o export default, no final do código, inserindo um export defalt Button, por exemplo, porém não é tão indicado pois pode gerar conflitos caso o nome do componente seja alterado */
 
-import { useState } from "react";
+import { ButtonHTMLAttributes } from "react";
 
-export function Button() {
-  // o nome da variável let vem de let it change (deixe mudar)
-  // let counter = 0;
+import '../styles/button.scss';
 
-  const [counter, setCounter] = useState(0)
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-  function increment() {
-    setCounter(counter + 1);
-    console.log(counter);
-  }
-
+export function Button(props: ButtonProps) {
   return (
-    <button onClick={increment}>
-      {counter}
-    </button>
+    <button className="button" {...props} />
   )
 }

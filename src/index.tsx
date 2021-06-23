@@ -4,6 +4,8 @@ import App from './App';
 
 import './services/firebase'
 
+import './styles/global.scss'
+
 /* o método render do ReactDOM é utilizado uma única vez na aplicação e tem como propósito renderizar alguma coisa dentro do elemento no HTML */
 ReactDOM.render(
   <React.StrictMode>
