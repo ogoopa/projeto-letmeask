@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+https://pt-br.reactjs.org/
+
 Quando trabalhamos com o HTML dentro do JavaScript => JSX (JacaScript XML (linguagem base do html)) 
 
 A extensão TSX se dá pelo TypeScript, especificando que o JSX está sendo escrito com TypeScript
@@ -118,9 +120,39 @@ O Firebase é uma plataforma desenvolvida pelo Google para a criação de aplica
 
 Primeiro Código: #together
 Segundo Código: #unidade
+Terceiro Código: #embuscadeevolução
 
 ## Contextos do React
 
 - utilizado quando se quer compartilhar informações entre diferentes componentes numa aplicação;
 - essa informação pode ser qualquer coisa, textos, valores mais complexos como objetos, arrays;
 - a forma mais correta e simples de se fazer isso no React é utilizando contextos;
+
+- Context API
+- async / await
+
+Componente:
+
+1 - aquilo que se repete;
+2 - consigo isolar o funcionamento do restante;
+
+## DEPLOY
+
+O verbo deploy, em inglês, quer dizer implantar.
+
+Em programação, seu sentido está intimamente relacionado à sua tradução literal: fazer um deploy, em termos práticos, significa colocar no ar alguma aplicação que teve seu desenvolvimento concluído.
+
+Esta tarefa é extremamente comum dentro do escopo de trabalho dos programadores, embora seja muito comumente associada somente aos profissionais de infraestrutura, ou DevOps.
+
+## NLW encontro
+
+-- Como criar um botão signOut no projeto do letmeask;
+simples:
+  criar um metodo dentro do Contexto chamado signOut
+
+  async function signOut() {
+    await auth.signOut();
+  }
+  -somente isso;
+  - após, fazer o botão, chamar esta função e pronto.
+

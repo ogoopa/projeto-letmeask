@@ -8,10 +8,11 @@ Para habilitar o App a ler dois componentes React, é necessário inserir os com
   
   yarn add @types/react-router-dom
 */
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { Home } from './pages/Home';
 import { NewRoom } from './pages/NewRoom';
+import { Room } from './pages/Room';
 
 import { AuthContextProvider } from './contexts/AuthContext'
 
@@ -20,8 +21,11 @@ function App() {
     /* quando enviamos conteúdo dentro de um componente, isso se torna uma propriedade no React, a qual chamamos de children */
     <BrowserRouter>
       <AuthContextProvider>
-        <Route path="/" exact component={Home} />
-        <Route path="/rooms/new" component={NewRoom} />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/rooms/new" exact component={NewRoom} />
+          <Route path="/rooms/:id" component={Room} />
+        </Switch>
       </AuthContextProvider>
     </BrowserRouter>
   );
