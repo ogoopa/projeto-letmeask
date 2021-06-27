@@ -22,6 +22,7 @@ export const AuthContext = createContext({} as AuthContextType);
 
 export function AuthContextProvider(props: AuthContextProviderProps) {
   const [user, setUser] = useState<User>();
+  /* const [loading, setLoading] = useState(true); */
 
   useEffect(() => {
   // boa prática: toda vez que declaramos um event listener, temos a obrigação de nos descadastrarmos desse event list sempre ao final do metodo useEffect;
@@ -38,6 +39,7 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
           name: displayName,
           avatar: photoURL
         })
+        /* setLoading(false) */
       }
     })
 
@@ -66,6 +68,10 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
       })
     }
   }
+  
+/*   if (loading) {
+    return <p>Carregando...</p>
+  }; */
 
   return(
     <AuthContext.Provider value={{ user, signInWithGoogle }}>

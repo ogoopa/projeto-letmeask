@@ -11,6 +11,7 @@ import { Button } from '../components/Button';
 
 import '../styles/auth.scss';
 import { useAuth } from '../hooks/useAuth';
+/* import { useTheme } from '../hooks/useTheme'; */
 
 
 // webpack (snowpack, vite, ...) - Module Bunder
@@ -18,6 +19,9 @@ import { useAuth } from '../hooks/useAuth';
 export function Home() {
   const history = useHistory();
   const { user, signInWithGoogle } = useAuth();
+
+/*   const { theme, toggleTheme } = useTheme(); */
+
   const [roomCode, setRoomCode] = useState('');
 
   async function handleCreateRoom() {
@@ -37,7 +41,12 @@ export function Home() {
     const roomRef = await database.ref(`rooms/${roomCode}`).get();
 
     if (!roomRef.exists()) {
-      alert('Room does not exists.');
+      alert('Esta sala não existe.');
+      return;
+    }
+
+    if (roomRef.val().endedAt) {
+      alert('Esta sala está fechada.');
       return;
     }
 
@@ -45,7 +54,7 @@ export function Home() {
   }
 
   return (
-    <div id="page-auth">
+    <div id="page-auth" /* className={theme} */>
       <aside>
         <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas"/>
         <strong>Crie salas de Q&amp;A ao-vivo</strong>

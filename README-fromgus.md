@@ -121,6 +121,7 @@ O Firebase é uma plataforma desenvolvida pelo Google para a criação de aplica
 Primeiro Código: #together
 Segundo Código: #unidade
 Terceiro Código: #embuscadeevolução
+Quarto Código: #legacy
 
 ## Contextos do React
 
@@ -156,3 +157,13 @@ simples:
   -somente isso;
   - após, fazer o botão, chamar esta função e pronto.
 
+
+  ## IMPLEMENTAR
+
+  - Responsividade; (video rocketseat)
+  - Tema Dark / Ligjt;
+  - Versão PWA (transformar em app);
+  - Outros bancos de dados;
+  - Styled Components (biblioteca CSS - SASS);
+  - ESLint, Prettier; (video rocketseat)
+  - Github detalhado do projeto! (ver github da rocketseat / diego)
